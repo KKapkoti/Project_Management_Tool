@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import useAuth from "./hooks/useAuth"; // Custom hook to access AuthContext
 import { AuthProvider } from "./context/AuthContext";
 import { ThemeProvider } from "./context/ThemeContext";
+import { ProjectProvider } from "./context/ProjectContext";
 import Login from "./screens/Login";
 import Signup from "./screens/SignUp";
 import Workspace from "./screens/Workspace";
@@ -24,6 +25,7 @@ function App() {
   return (
     <AuthProvider>
       <ThemeProvider>
+        <ProjectProvider>
           <Router>
             <Navbar />
             <Routes>
@@ -40,6 +42,7 @@ function App() {
             </Routes>
             <Footer />
           </Router>
+        </ProjectProvider>
       </ThemeProvider>
     </AuthProvider>
   );
