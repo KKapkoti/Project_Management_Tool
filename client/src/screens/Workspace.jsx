@@ -15,7 +15,7 @@ const Workspace = () => {
         <h1 className="text-2xl font-bold text-white mb-4">Workspace</h1>
         <div className="grid grid-cols-3 gap-4">
         {workspaces?.length > 0 ? (
-          workspace.map((workspace) => (
+          workspaces.map((workspace) => (
             <WorkspaceCard key={workspace.id} title={workspace.name} description={workspace.description} />
           ))
         ) : (
